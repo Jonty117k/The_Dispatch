@@ -1,0 +1,22 @@
+<svg width="200px"  height="200px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-blank">
+    <circle cx="50" cy="50" fill="none" ng-attr-r="{{config.r3}}" ng-attr-stroke="{{config.c3}}" ng-attr-stroke-width="{{config.width}}" r="26" stroke="#ababab" stroke-width="5">
+      <animate attributeName="stroke-dasharray" calcMode="linear" values="0 0 0 81.68140899333463 0 81.68140899333463;0 0 81.68140899333463 0 0 81.68140899333463;0 0 81.68140899333463 0 0 81.68140899333463;0 81.68140899333463 0 81.68140899333463 0 81.68140899333463;0 81.68140899333463 0 81.68140899333463 0 81.68140899333463" keyTimes="0;0.2;0.4;0.6;1" dur="1.6" begin="-1.6s" repeatCount="indefinite"></animate>
+    </circle>
+    <circle cx="50" cy="50" fill="none" ng-attr-r="{{config.r2}}" ng-attr-stroke="{{config.c2}}" ng-attr-stroke-width="{{config.width}}" r="20" stroke="#d2d2d2" stroke-width="5">
+      <animate attributeName="stroke-dasharray" calcMode="linear" values="0 0 0 62.83185307179586 0 62.83185307179586;0 0 62.83185307179586 0 0 62.83185307179586;0 0 62.83185307179586 0 0 62.83185307179586;0 62.83185307179586 0 62.83185307179586 0 62.83185307179586;0 62.83185307179586 0 62.83185307179586 0 62.83185307179586" keyTimes="0;0.2;0.4;0.6;1" dur="1.6" begin="-1.472s" repeatCount="indefinite"></animate>
+    </circle>
+    <circle cx="50" cy="50" fill="none" ng-attr-r="{{config.r1}}" ng-attr-stroke="{{config.c1}}" ng-attr-stroke-width="{{config.width}}" r="14" stroke="#f0f0f0" stroke-width="5">
+      <animate attributeName="stroke-dasharray" calcMode="linear" values="0 0 0 43.982297150257104 0 43.982297150257104;0 0 43.982297150257104 0 0 43.982297150257104;0 0 43.982297150257104 0 0 43.982297150257104;0 43.982297150257104 0 43.982297150257104 0 43.982297150257104;0 43.982297150257104 0 43.982297150257104 0 43.982297150257104" keyTimes="0;0.2;0.4;0.6;1" dur="1.6" begin="-1.344s" repeatCount="indefinite"></animate>
+    </circle>
+    <g transform="rotate(180 50 50)">
+      <circle cx="50" cy="50" fill="none" ng-attr-r="{{config.r3}}" ng-attr-stroke="{{config.c3}}" ng-attr-stroke-width="{{config.width}}" r="26" stroke="#ababab" stroke-width="5">
+        <animate attributeName="stroke-dasharray" calcMode="linear" values="0 0 0 81.68140899333463 0 81.68140899333463;0 0 81.68140899333463 0 0 81.68140899333463;0 0 81.68140899333463 0 0 81.68140899333463;0 81.68140899333463 0 81.68140899333463 0 81.68140899333463;0 81.68140899333463 0 81.68140899333463 0 81.68140899333463" keyTimes="0;0.2;0.4;0.6;1" dur="1.6" begin="-0.704s" repeatCount="indefinite"></animate>
+      </circle>
+      <circle cx="50" cy="50" fill="none" ng-attr-r="{{config.r2}}" ng-attr-stroke="{{config.c2}}" ng-attr-stroke-width="{{config.width}}" r="20" stroke="#d2d2d2" stroke-width="5">
+        <animate attributeName="stroke-dasharray" calcMode="linear" values="0 0 0 62.83185307179586 0 62.83185307179586;0 0 62.83185307179586 0 0 62.83185307179586;0 0 62.83185307179586 0 0 62.83185307179586;0 62.83185307179586 0 62.83185307179586 0 62.83185307179586;0 62.83185307179586 0 62.83185307179586 0 62.83185307179586" keyTimes="0;0.2;0.4;0.6;1" dur="1.6" begin="-0.8320000000000001s" repeatCount="indefinite"></animate>
+      </circle>
+      <circle cx="50" cy="50" fill="none" ng-attr-r="{{config.r1}}" ng-attr-stroke="{{config.c1}}" ng-attr-stroke-width="{{config.width}}" r="14" stroke="#f0f0f0" stroke-width="5">
+        <animate attributeName="stroke-dasharray" calcMode="linear" values="0 0 0 43.982297150257104 0 43.982297150257104;0 0 43.982297150257104 0 0 43.982297150257104;0 0 43.982297150257104 0 0 43.982297150257104;0 43.982297150257104 0 43.982297150257104 0 43.982297150257104;0 43.982297150257104 0 43.982297150257104 0 43.982297150257104" keyTimes="0;0.2;0.4;0.6;1" dur="1.6" begin="-1.024s" repeatCount="indefinite"></animate>
+      </circle>
+    </g>
+  </svg>

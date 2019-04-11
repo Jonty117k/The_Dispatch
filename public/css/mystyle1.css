@@ -1,0 +1,562 @@
+
+canvas {
+  display: block;
+}
+#particle-js {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+/*  top: 0;
+  left: 0;
+  z-index: -50;*/
+}
+#intro-logo {
+	top: -400px;
+	position: relative;
+	height: 400px;
+	width: auto;
+}
+#login-background {
+	background-color: #024884;
+	height: 100vh;
+  	box-shadow: 0 0 76px rgba(0,0,0,0.9) inset;
+}
+
+#login-title {
+	height: 150px;
+	width: auto;
+	position: relative;
+	top: 30px;
+	left: 10px;
+}
+
+#login-container {
+	top:50%;
+	left:50%;
+	margin-top: 250px;
+}
+#username {
+	margin-top: 20px;
+}
+#password {
+	margin-top: 10px;	
+}
+#user-name-input {
+	border-radius: 20px;
+	margin-left: 10px;
+	height: 40px;
+	width: auto;
+	font-family: 'Righteous', cursive;
+	font-weight: bold;
+	font-size: 15px;
+}
+#pw-input {
+	border-radius: 20px;
+	margin-left: 10px;
+	height: 40px;
+	width: auto;	
+font-family: 'Righteous', cursive;
+	font-weight: bold;
+	font-size: 15px;
+}
+#user-pic {
+	height: 40px;
+	width: auto;
+}
+#lock-pic {
+	height: 40px;
+	width: auto;
+}
+#add-user {
+	height: 55px;
+	width: auto;
+}
+#button-row {
+	margin-top: 30px;
+}
+#login-button {
+
+	margin-left: 10px;
+	height: 45px;
+	width: auto;
+}
+#login-button:hover {
+	position: relative;
+	top: 3px;	
+}
+#add-user-button:hover {
+	position: relative;
+	top: 3px;	
+}
+#login-button:active {
+	position: relative;
+	top: 4px;	
+}
+#add-user-button:active {
+	position: relative;
+	top: 4px;	
+}
+
+#settings-button:hover {
+	position: relative;
+	top: 3px;	
+}
+#settings-button:active {
+	position: relative;
+	top: 4px;	
+}
+#add-user-button {
+	margin-left: 10px;	
+	height: 45px;
+	width: auto;	
+}
+#settings-button {
+
+	margin-left: 10px;
+	height: 45px;
+	width: auto;			
+}
+/*#add-user-container-1 {
+	background-color: white;
+	border-radius: 20px;
+	font-family: 'Pattaya', sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+	width: 45%;
+}*/
+#add-container {
+	margin-top: 190px;
+}
+#add-user-title {
+	font-size: 40px;
+  	font-family: 'Righteous', cursive;  
+	font-weight: bold;
+	color: white;
+}
+.add-user-input {
+	margin-top: 20px;
+	border-radius: 20px;
+	margin-left: 10px;
+	margin-bottom: 7px;
+	height: 30px;
+	width: 400px;
+  	font-family: 'Righteous', cursive;  
+	font-weight: bold;
+	font-size: 15px;
+	text-align: center;
+}
+.add-user-text {
+  	font-family: 'Righteous', cursive;  
+	font-size: 25px;
+	color: white;
+}
+#bottomInput {
+	margin-bottom: 30px;
+}
+#confirm-form-btn-1 {
+	height: 45px;
+	width: auto;
+	margin-top: 30px;
+
+}
+#confirm-form-btn-1:hover {
+	position: relative;
+	top: 3px;	
+}
+#confirm-form-btn-1:active {
+	position: relative;
+	top: 4px;	
+}
+#confirm-form-btn-3 {
+	height: 45px;
+	width: auto;
+	margin-bottom: 10px;
+}
+#confirm-form-btn-3:hover {
+	position: relative;
+	top: 3px;	
+}
+#confirm-form-btn-3:active {
+	position: relative;
+	top: 4px;	
+}
+#confirm-form-btn-2 {
+	height: 45px;
+	width: auto;
+	margin-top: 40px;
+}
+#confirm-form-btn-2:hover {
+	position: relative;
+	top: 3px;	
+}
+#confirm-form-btn-2:active {
+	position: relative;
+	top: 4px;
+}
+#survey-title {
+	font-size: 40px;
+  	font-family: 'Righteous', cursive;  
+	font-weight: bold;
+	color: white;
+}
+.genre {
+	height: 48px;
+	width: 120px;
+	background-color: white;
+	border-bottom-right-radius: 20px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 4px;
+	border-top-right-radius: 4px;
+	margin-top: 20px;
+	margin-left: 38px;
+	font-size: 36px;
+	font-family: 'Pattaya', sans-serif;
+	color: #d80027;	
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+}
+.genre:hover {
+	position: relative;
+	top: 3px;	
+}
+.genre:active {
+	position: relative;
+	top: 4px;	
+}
+#user-created {
+	font-size: 20px;
+	font-family: 'Pattaya', sans-serif;
+	font-weight: bold;
+	color: white;
+	margin-left: 20px;	
+
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/*/*----------------------------------------------------------------------------------------------*/
+
+
+#nav-logo {
+	top: 12px;
+	position: absolute;
+	height: 50px;
+	width: auto;
+	left: 41%;
+}
+.navbar-inverse {
+  	box-shadow: 0 0 26px rgba(0,0,0,0.7);	
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+	z-index:10;
+}
+
+#nav-icon2 {
+  width: 50px;
+  height: 25px;
+  position: relative;
+  float: right;
+  margin-top: 15px;
+  margin-right: 30px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+/* Icon 2 */
+
+#nav-icon2 {
+}
+
+#nav-icon2 span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 50%;
+  background: white;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+#nav-icon2:hover {
+	top: 2px;
+	opacity: .7;
+}
+
+
+#nav-icon2 span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 9px 9px 0;
+}
+
+#nav-icon2 span:nth-child(odd) {
+  left:0px;
+  border-radius: 9px 0 0 9px;
+}
+
+#nav-icon2 span:nth-child(1), #nav-icon2 span:nth-child(2) {
+  top: 0px;
+}
+
+#nav-icon2 span:nth-child(3), #nav-icon2 span:nth-child(4) {
+  top: 18px;
+}
+
+#nav-icon2 span:nth-child(5), #nav-icon2 span:nth-child(6) {
+  top: 36px;
+}
+
+#nav-icon2.open span:nth-child(1),#nav-icon2.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon2.open span:nth-child(2),#nav-icon2.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon2.open span:nth-child(1) {
+  left: 5px;
+  top: 7px;
+}
+
+#nav-icon2.open span:nth-child(2) {
+  left: calc(50% - 5px);
+  top: 7px;
+}
+
+#nav-icon2.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+#nav-icon2.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+#nav-icon2.open span:nth-child(5) {
+  left: 5px;
+  top: 29px;
+}
+
+#nav-icon2.open span:nth-child(6) {
+  left: calc(50% - 5px);
+  top: 29px;
+}
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+	font-family: 'Pattaya', sans-serif;
+
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+.nav-icon {
+	height: 30px;
+	width: auto;
+	margin-left: 7px;
+}
+.nav-icon:hover {
+	position: relative;
+	top: 3px;
+}
+.nav-row {
+	float: right;
+	margin-right: 20px
+}
+
+#profile-container {
+	border-radius: 13px;
+	border-top-left-radius: 13px;
+	border-top-right-radius: 13px;
+	background-color: white;
+	height: 600px;
+	width: 1000px;
+  	box-shadow: 0 0 76px rgba(0,0,0,0.4);
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	float: left;
+}
+
+#profile-title {
+	font-size: 60px;
+	color: white;
+	font-family: 'Pattaya', sans-serif;
+	float: right;
+	margin-right: 160px;	
+}
+#profile-pic {
+	height: 225px;
+	width: 200px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 90px;
+    margin-top: 20px;
+	border-style: solid;
+/*    border-width: 1px;
+*/}
+#empty {
+	border-top-left-radius: 13px;
+	border-top-right-radius: 13px;
+	height: 30px;
+	background-color: white;
+}
+#header-band {
+	height: 100px;
+	width: 100%;
+	background-color: #449af8;
+}
+.nav-tabs {
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 10px;
+	margin-left: 40px;
+	border-bottom: 0px;
+	height: 50px;
+}
+#user-info-con {
+	float: left;
+	margin-top: 20px;
+	font-size: 18px;
+	margin-left: 49px;
+}
+#find-friends-title {
+	font-size: 60px;
+	color: white;
+	font-family: 'Pattaya', sans-serif;
+	margin-right: 160px;	
+
+}
+#events-title {
+	font-size: 60px;
+	color: white;
+	font-family: 'Pattaya', sans-serif;
+	margin-right: 160px;
+}
+.button-row-2 {
+	height: 35px;
+	width: auto;
+	margin-left: 25px;
+	margin-top: 25px;
+}
+#trending-icon {
+}
+
+#trending-icon:hover {
+		position: relative;
+
+	top:3px;
+
+}
+#politics-icon:hover {
+		position: relative;
+
+	top:3px;
+}
+#sports-icon:hover {
+		position: relative;
+
+	top:3px;
+
+}
+#tech-icon:hover {
+		position: relative;
+
+	top:3px;
+
+}
+#entertainment-icon:hover {
+		position: relative;
+
+	top:3px;
+
+}
+
+/*-------------------media queries-------------------*/
+
+@media screen and (max-width: 1700px) {
+	html {
+		zoom: 85%;
+	}
+}
+@media screen and (max-width: 1400px) {
+	html {
+		zoom: 75%;
+	}
+}
+@media screen and (max-width: 1100px) {
+	html {
+		zoom: 65%;
+	}
+}

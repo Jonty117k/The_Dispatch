@@ -1,0 +1,219 @@
+<div class="container-fluid">
+			<div class="row text-center">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<div class="wow fadeInDown animated" id="add-container" data-wow-delay="3.3s">
+						<div id="add-user-title">Create Account</div>
+						<div id="add-user-container-2">
+							<form method="post" action="/users/register">
+								<div id="topText" class="add-user-text">Choose a Username</div><input class="add-user-input" name="username">
+								<div class="add-user-text">Choose a Password</div><input class="add-user-input" type="password" name="password">
+								<div class="add-user-text">Repeat Password</div><input class="add-user-input" type="password" name="password2">
+								<div class="add-user-text">Enter Email Address</div><input class="add-user-input" name="email">
+						</div>
+						<img class="wow rollIn animated" data-wow-delay="3.9s" id="confirm-form-btn-1" src="/images/checked.png">
+					</div>
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4" id="survey-container">
+						<div id="survey-title">Subscribe to News Outlets</div>
+						<div class="col-sm-6">
+							<div class="genre wow fadeInDown animated" data-wow-delay=".1s" id="rock"><img id="nyt" src="/images/outlet-logos/nyt-logo.png"></div>
+							<div class="genre wow fadeInDown animated" data-wow-delay=".2s" id="reggae"><img id="guardian" src="/images/outlet-logos/guardian.jpg"></div>
+							<div class="genre wow fadeInDown animated" data-wow-delay=".3s" id="punk"><img id="wash-po" src="/images/outlet-logos/twp.png"></div>
+						</div>
+						<div class="col-sm-6">
+							<div class="genre wow fadeInDown animated" data-wow-delay=".4s" id="dance"><img id="espn" src="/images/outlet-logos/espn.jpg"></div>
+							<div class="genre wow fadeInDown animated" data-wow-delay=".5s" id="soul"><img id="reuters" src="/images/outlet-logos/reuters.png"></div>
+							<div class="genre wow fadeInDown animated" data-wow-delay=".6s" id="rnb"><img id="wsj" src="/images/outlet-logos/wsj.png"></div>
+						</div>
+						    <button type="submit" id="confirm-btn-2" class="btn btn-default fadeInLeft animated" style="margin-right: 45px">✔</button>
+					</form>
+
+ 	 			</div>
+				<div class="col-sm-4"></div>
+			</div>
+		</div>
+		<div class="video-background">
+		    <div class="video-foreground">
+				<iframe src="https://www.youtube.com/embed/hwte1mK0u8E?autoplay=1&mute=1&loop=1&playlist=_hwte1mK0u8E" frameborder="0" allowfullscreen></iframe>
+		    </div>
+		 </div>
+
+	
+	<script type="text/javascript">
+
+	$('#survey-container').hide();
+
+	new WOW().init();
+
+	function removeLogo() {
+		$("#intro-logo").fadeOut({queue: false, duration: 700});
+	}
+	function showParticles() {
+		$("#particle-js").fadeIn();
+	}
+	function showCrtAcc() {
+		$("#add-container").fadeIn({queue: false, duration: 600}).animate({top:'180px'}, 550);
+	}
+	function showUserSurvey() {
+		$("#survey-container").fadeIn({queue: false, duration: 600}).animate({top:'180px'}, 550);
+	}
+	function showLogin() {
+		$("#login-container").fadeIn();
+	}
+
+	$(document).ready(function(){
+
+		$("#intro-logo").fadeIn({queue: false, duration: 650}).animate({top:'280px'}, 650);
+
+		setTimeout(removeLogo, 1020);
+		setTimeout(showParticles, 1500);
+		$("#add-user-button").click(function(){
+			$("#login-container").removeClass("wow fadeInDown animated");
+			$("#login-container").fadeOut({queue: false, duration: 600}).animate({bottom:'150px'}, 550);
+			setTimeout(showCrtAcc, 1010);
+		});
+		$("#confirm-form-btn-1").click(function(){
+			$("#add-container").fadeOut({queue: false, duration: 600}).animate({bottom:'150px'}, 550);
+			setTimeout(showUserSurvey, 1010);
+		});
+		$("#confirm-form-btn-2").click(function(){
+			$("#survey-container").fadeOut({queue: false, duration: 600}).animate({bottom:'150px'}, 550);
+			setTimeout(showLogin, 1010);
+		});
+		$("#rock").on("click", function(){
+			console.log("hello");
+			$("#rock").css("background-color", "8fb7ff");
+		});
+	});
+
+		//friend finder 
+		//------------------------------------------------------------------------------------
+		var rock = false;
+		$("#rock").on("click", function() {
+			if (rock === false) {
+				rock = true;
+				$(this).css("background", "#81bdff");
+				$.ajax({
+					url: "/users/subscribe",
+					type: "PUT", 
+					data:{
+						subscription: "nyt",
+						subscribe: "true",
+						userName: ""
+					},
+					success: function(result){
+
+    			}});			}
+			else {
+				$(this).css("background", "white");
+				rock=false;
+			};
+		});
+
+		var dance = false;
+		$("#dance").on("click", function() {
+			if (dance === false) {
+				dance = true;
+				$(this).css("background", "#81bdff");
+			}
+			else {
+				$(this).css("background", "white");
+				dance=false;
+			};
+		});
+
+		var jazz = false;
+		$("#jazz").on("click", function() {
+			if (jazz === false) {
+				jazz = true;
+				$(this).css("background", "#81bdff");
+			}
+			else {
+				$(this).css("background", "white");
+				jazz=false;
+			};
+		});
+
+		var reggae = false; 
+		$("#reggae").on("click", function() {
+			if (reggae === false) {
+				reggae = true;
+				$(this).css("background", "#81bdff");
+			}
+			else {
+				$(this).css("background", "white");
+				reggae=false;
+			};
+		});
+
+		var soul = false;
+		$("#soul").on("click", function() {
+			if (soul === false) {
+				soul = true;
+				$(this).css("background", "#81bdff");
+			}
+			else {
+				$(this).css("background", "white");
+				soul=false;
+			};
+		});
+
+		var hiphop = false;
+		$("#hiphop").on("click", function() {
+			if (hiphop === false) {
+				hiphop = true;
+				$(this).css("background", "#81bdff");
+			}
+			else {
+				$(this).css("background", "white");
+				hiphop=false;
+			};
+		});
+
+		var punk = false;
+		$("#punk").on("click", function() {
+			if (punk === false) {
+				punk = true;
+				$(this).css("background", "#81bdff");
+			}
+			else {
+				$(this).css("background", "white");
+				punk=false;
+			};
+		});
+
+		var rnb = false;
+		$("#rnb").on("click", function() {
+			if (rnb === false) {
+				rnb = true;
+				$(this).css("background", "#81bdff");
+			}
+			else {
+				$(this).css("background", "white");
+				rnb=false;
+			};
+		});
+
+		var folk = false;
+		$("#folk").on("click", function() {
+			if (folk === false) {
+				folk = true;
+				$(this).css("background", "#81bdff");
+			}
+			else {
+				$(this).css("background", "white");
+				folk=false;
+			};
+		});
+
+		
+
+	</script>

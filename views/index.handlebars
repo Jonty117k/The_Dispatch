@@ -1,0 +1,322 @@
+
+	<div id="user-background" style="background-color: white">
+	 	<nav class="navbar navbar-inverse wow fadeInDown animated" style="background-color: black; height: 80px">
+			<div class="container-fluid">
+	 				<img class="button-row-2" src="images/line-chart.png" id="trending-icon">
+					<img class="button-row-2" src="images/capitol.png" id="politics-icon">
+					<img class="button-row-2" src="images/rugby-balls.png" id="sports-icon">
+					<img class="button-row-2" src="images/laptop.png" id="tech-icon">
+					<img class="button-row-2" src="images/movie-roll.png" id="entertainment-icon">
+ 				<div id="mySidenav" class="sidenav">
+					<div id="search">Search<img src="images/Azure.svg" id="search-gif"></div>
+						<div id="search-stuff" class="" data-wow-delay=''>
+						<input id="search-input" name="search">
+						<img id="confirm-form-btn-3" src="/images/checked.png">
+					</div>
+				</div>
+			<!-- Use any element to open the sidenav -->
+			<span id="open-tab">			
+				<div id="nav-icon2">
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				</div>
+			</span>			 
+			</div>
+				<!--Logo! -->	
+				<div class="navbar-header">
+					<div class="row text-center">
+						<img id="nav-logo" src="images/logo1.png" style="height:60px; width: auto">	
+					</div>
+				</div>
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<div class="attach-here">
+						<h1 id="scroll-down">Scroll Down</h1>
+						<img id="loadGif" class="fadeIn" src="images/article-load.gif">
+					</div>
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+		</div>
+		</div>
+
+
+	<script type="text/javascript">
+
+	var tabOpen = false;
+	$('#search-gif').hide();
+	$('#search-stuff').hide();
+	$('#search').hide();
+
+
+//-------------------------------------------------------------------------------
+		//open tab code
+	$('#open-tab').on("click", function() {
+		if (tabOpen === false) {
+			tabOpen = true;
+			$('#search').fadeIn(2500);
+			$('#search-gif').fadeIn(2500);
+			// $('#search-input').fadeIn(2500);
+			// $('#confirm-form-btn-3').fadeIn(2500);
+			$('#search-stuff').fadeIn(2500);
+			document.getElementById("mySidenav").style.width = "470px";
+    		// document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    		// $('#search-stuff').removeClass('fadeInLeft');
+  		
+		}
+		else if (tabOpen === true) {
+			tabOpen = false;
+			$('#search').hide();
+			$('#search-gif').hide();
+			// $('#search-stuff').adddClass('fadeInLeft');
+			// $('#search-input').hide();
+			// $('#confirm-form-btn-3').hide();
+			$('#search-stuff').hide();
+			document.getElementById("mySidenav").style.width = "0";
+    		// document.body.style.backgroundColor = "white";
+		}
+	});
+
+	$("#sports-icon").on("click", function() {
+
+		var queryURL = 'https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=93ca146e88dc40f4a88ae4d76f2b3dce';
+
+		$.ajax({
+			url: queryURL,
+			method: "GET"
+		}).done(function(response){
+
+			var results = response.articles;
+
+			for (var i = 0; i < results.length; i++) {
+
+				var container = $('<div class="article-container wow fadeInUp" data-wow-delay=".6s">');
+				//avitar
+				var newsIcon = $('<img class="outlet-avitar" src="images/espn-icon.png">')
+				container.prepend(newsIcon);
+				//title
+				var title = $('<div class="news-headline">'+results[i].title+'</div>');
+				container.append(title);
+				// image
+				var articleURL = results[i].url;
+				var image = $("<a target='_blank' href="+articleURL+"><img class='article-picture' src="+results[i].urlToImage+"></a>");
+				container.append(image);
+				//author
+				var author = $('<div id="author">').text("by " + results[i].author);
+				container.append(author);
+				//description
+				var description = $('<div id="description">').text(results[i].description);
+				container.append(description);
+
+				var divLine = $('<div id="divLine"></div>');
+				container.append(divLine);
+
+				var saveIcon = $('<img class="save-icon" src="images/save.svg">');
+				container.append(saveIcon);
+
+				var comment = $('<div id="comment"><img class="comment-icon" src="images/message.png">Comment</div>');
+				container.append(comment);
+
+				$('.attach-here').append(container);
+
+			}
+		});
+	});
+
+	$("#trending-icon").on("click", function() {
+
+		var queryURL = 'https://newsapi.org/v1/articles?source=reuters&sortBy=top&apiKey=93ca146e88dc40f4a88ae4d76f2b3dce';
+
+		$.ajax({
+			url: queryURL,
+			method: "GET"
+		}).done(function(response){
+
+			var results = response.articles;
+
+			for (var i = 0; i < results.length; i++) {
+
+				var container = $('<div class="article-container wow fadeInUp" data-wow-delay=".6s">');
+				//avitar
+				var newsIcon = $('<img class="outlet-avitar" src="images/Reuters-icon.png">')
+				container.prepend(newsIcon);
+				//title
+				var title = $('<div class="news-headline">'+results[i].title+'</div>');
+				container.append(title);
+				// image
+				var articleURL = results[i].url;
+				var image = $("<a target='_blank' href="+articleURL+"><img class='article-picture' src="+results[i].urlToImage+"></a>");
+				container.append(image);
+				//author
+				var author = $('<div id="author">').text("by " + results[i].author);
+				container.append(author);
+				//description
+				var description = $('<div id="description">').text(results[i].description);
+				container.append(description);
+
+				var divLine = $('<div id="divLine"></div>');
+				container.append(divLine);			
+
+				var saveIcon = $('<img class="save-icon" src="images/save.svg">');
+				container.append(saveIcon);
+
+				var comment = $('<div id="comment"><img class="comment-icon" src="images/message.png">Comment</div>');
+				container.append(comment);
+
+				$('.attach-here').append(container);
+
+			}
+		});
+	});
+
+
+
+//-------------------------------------------------------------------------------
+		//search for articles code
+
+	$("#confirm-form-btn-3").on("click", function() {
+
+		var queryURL = 'https://newsapi.org/v1/articles?source=the-guardian-au&sortBy=top&apiKey=d1043e950f034a42aea1cd51bcba2205';
+
+		$.ajax({
+			url: queryURL,
+			method: "GET"
+		}).done(function(response){
+
+			var results = response.articles;
+
+
+				for (var i = 0; i < results.length; i++) {
+
+					console.log(results[i]);
+
+					var description = results[i].description.toLowerCase();
+					var searchTerm = $('#search-input').val().trim();
+					var includesTerm = description.includes(searchTerm);
+
+					if (includesTerm === true) {
+
+						var container = $('<div class="article-container wow fadeInUp" data-wow-delay=".6s">');
+						//avitar
+						var newsIcon = $('<img class="outlet-avitar" src="images/guardian-icon.png">');
+						container.prepend(newsIcon);
+						//title
+						var title = $('<div class="news-headline">'+results[i].title+'</div>');
+						container.append(title);
+						// image
+						var articleURL = results[i].url;
+						var image = $("<a target='_blank' href="+articleURL+"><img class='article-picture' src="+results[i].urlToImage+"></a>");
+						container.append(image);
+						//author
+						var author = $('<div id="author">').text("by " + results[i].author);
+						container.append(author);
+						//description
+						var description = $('<div id="author">').text(results[i].description);
+						container.append(description);
+
+						var divLine = $('<div id="divLine"></div>');
+						container.append(divLine);	
+
+						var saveIcon = $('<img class="save-icon" src="images/save.svg">');
+						container.append(saveIcon);
+
+						var comment = $('<div id="comment"><img class="comment-icon" src="images/message.png">Comment</div>');
+						container.append(comment);	
+
+						$('.attach-here').append(container);
+
+					}				
+				else if (includesTerm === false) {
+						console.log("fuck off");
+					}
+				}
+
+			});
+
+	});
+
+
+	function onPageLoad() {
+
+		var queryURL = 'https://newsapi.org/v1/articles?source=the-new-york-times&sortBy=top&apiKey=d1043e950f034a42aea1cd51bcba2205';
+
+		$.ajax({
+			url: queryURL,
+			method: "GET"
+		}).done(function(response){
+
+			var results = response.articles;
+
+			for (var i = 0; i < results.length; i++) {
+
+				var container = $('<div class="article-container wow fadeInUp" data-wow-delay=".6s">');
+				//avitar
+				var newsIcon = $('<img class="outlet-avitar" src="images/nyt.jpg">')
+				container.prepend(newsIcon);
+				//title
+				var title = $('<div class="news-headline">'+results[i].title+'</div>');
+				container.append(title);
+				// image
+				var articleURL = results[i].url;
+				var image = $("<a target='_blank' href="+articleURL+"><img class='article-picture' src="+results[i].urlToImage+"></a>");
+				container.append(image);
+				//author
+				var author = $('<div id="author">').text("by " + results[i].author);
+				container.append(author);
+				//description
+				var description = $('<div id="description">').text(results[i].description);
+				container.append(description);
+
+				var divLine = $('<div id="divLine"></div>');
+				container.append(divLine);
+
+				var saveIcon = $('<img class="save-icon" src="images/save.svg">');
+				container.append(saveIcon);
+
+				var comment = $('<div id="comment"><img class="comment-icon" src="images/message.png">Comment</div>');
+				container.append(comment);
+
+				$('.attach-here').append(container);
+
+			}
+
+		});
+	};
+
+	//-------------------------------------------------------------------------------------------
+	//-------------------------------------------------------------------------------------------
+	//-------------------------------------------------------------------------------
+
+		new WOW().init();
+
+		function removeLoad() {
+			$('#loadGif').fadeOut();
+		}
+		function showLoad() {
+			$('#loadGif').fadeIn();
+		}
+		$('#loadGif').hide();
+		$('#loadGif').fadeIn(1000);
+		$('#scroll-down').hide();
+		$('#scroll-down').fadeIn(1000);
+
+		$(document).ready(function(){
+			$('#nav-icon2').click(function(){
+				$(this).toggleClass('open');
+			});
+			setTimeout(removeLoad, 2100);
+			setTimeout(onPageLoad, 2300);
+		});	
+
+
+
+
+	</script>

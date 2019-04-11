@@ -1,0 +1,34 @@
+
+		<div class="container-fluid">
+			<div class="row text-center">
+				<div class="wow fadeInDown animated" id="login-container" data-wow-delay="2s">
+					<div>
+						<img id="login-title" src="/images/logo.png">
+					</div>
+					<form method="post" action="/users/login">
+					<div id="username">
+						<img id="user-pic" src="/images/user.png"><input id="user-name-input" placeholder="  Username" name="username">
+					</div>
+					<div id="password">
+						<img id="lock-pic" src="/images/padlock.png"><input type="password" id="pw-input" placeholder="  Password" name="password">
+					</div>
+					<div id="button-row" class="wow bounce animated" data-wow-delay="2.6s">
+						<button type="submit" id="confirm-btn-2" class="btn btn-default">✔</button>
+						<a href="/users/register"><img id="add-user-button" src="/images/user-plus.png"></a>
+						<img id="settings-button" src="/images/settings.png">
+					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="video-background">
+		    <div class="video-foreground">
+		       <iframe src="https://www.youtube.com/embed/_wOcPVa3xK4?autoplay=1&mute=1&loop=1&playlist=_wOcPVa3xK4" frameborder="0" allowfullscreen></iframe>
+		    </div>
+		 </div>
+		 
+	<script type="text/javascript">
+	new WOW().init();
+
+	</script>
