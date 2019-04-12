@@ -7,7 +7,7 @@ var User = require('../models/user');
 
 
 // User View
-app.get('/user', function(req, res) {
+router.get('/user', function(req, res) {
   res.render('user');
 });
 
