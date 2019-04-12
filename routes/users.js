@@ -15,6 +15,12 @@ router.get('/login', function(req, res){
 	res.render('login');
 });
 
+// User view
+router.get('/user', function(req, res) {
+  res.render('user');
+});
+
+
 // Register User
 router.post('/register', function(req, res){
 	var name = req.body.name;
