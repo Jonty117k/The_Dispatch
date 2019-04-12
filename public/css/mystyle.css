@@ -71,6 +71,9 @@
   left: 70px;
   cursor: pointer;
 }
+#comment:hover {
+  opacity: .7;
+}
 .comment-icon {
   height: 40px;
   margin-right: 8px;
@@ -139,6 +142,9 @@
   margin-top: 20px;
   opacity: .4;
   cursor: pointer;
+}
+.save-icon:hover {
+  opacity: .7;
 }
 #search {
   position: fixed;
