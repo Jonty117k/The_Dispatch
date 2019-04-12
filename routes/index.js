@@ -10,7 +10,7 @@ request('https://newsapi.org/v1/articles?source=techcrunch&apiKey=d1043e950f034a
 
 // Get Homepage
 router.get('/', function(req, res){
-	res.render('index');
+	res.render('login');
 });
 
 
