@@ -547,16 +547,16 @@ font-family: 'Righteous', cursive;
 
 @media screen and (max-width: 1700px) {
 	html {
-		zoom: 85%;
+		zoom: 75%;
 	}
 }
 @media screen and (max-width: 1400px) {
 	html {
-		zoom: 75%;
+		zoom: 65%;
 	}
 }
 @media screen and (max-width: 1100px) {
 	html {
-		zoom: 65%;
+		zoom: 55%;
 	}
 }
